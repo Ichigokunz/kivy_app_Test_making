@@ -35,7 +35,7 @@ class MainScr(Screen):
        self.add_widget(hl)
  
 class FirstScr(Screen):
-    def __init__(self, **kwargs):
+    def build(self, **kwargs):
        super().__init__(**kwargs)
        
        self.time_left = 0
@@ -46,7 +46,7 @@ class FirstScr(Screen):
        vl = BoxLayout(orientation='vertical', size_hint=(.5, .5), pos_hint={'center_x': 0.5, 'center_y': 0.5})
        
        self.start_button = Button(text='Unranked', on_press=self.start_timer)
-       self.start_button2 = Button(text='Ranked : Gold Matching', on_press=self.start_timer)
+       self.start_button2 = Button(text='Ranked : All Rank Matching', on_press=self.start_timer)
        self.stop_button = Button(text='Cancel', on_press=self.stop_timer)
        btn_back = ScrButton(self, direction='up', goal='main', text="Back", size_hint=(.5, 1), pos_hint={'right': 1})
        
